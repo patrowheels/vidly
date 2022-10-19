@@ -9,9 +9,10 @@ class movies extends Component {
     };
 
     handleDelete = (movie) => {
-        // this gets an entire whole new array of movies except the movie that we clicked on.
+        // this gets the entire array of movies except the movie that we clicked on.
 const movies = this.state.movies.filter(m => m._id !== movie._id)    
-    this.setState({movies: movies});
+    // this.state sends message that state is about to be updated and will activate render method soon.
+this.setState({movies: movies});
 };
     render() { 
         const myStyle = {
